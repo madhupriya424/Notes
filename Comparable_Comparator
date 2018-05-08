@@ -1,0 +1,50 @@
+Comparator & comparable
+
+class Laptop  { 
+	String brand;
+  int ram;
+  int price;
+  
+  public int compareTo(Laptop obj){
+  	return this.price - obj.price;
+  }
+}
+
+class Main{
+	public static void main(String[] args){
+ 	//List<Laptop> al = new ArrayList<Laptop>();
+  
+    arr[0] = new Laptop("Apple",8, 100));
+    arr[1] = new Laptop("Samsung",5, 80));
+    arr[2] = new Laptop("Dell",6, 60));
+    
+   
+    
+    Comparator<Laptop> lap1 = new Comparator<Laptop>() {
+
+        @Override
+        public int compare(Laptop e1, Laptop e2) {
+            return (int) (e1.price - e2.price;
+        }
+    };
+    
+    Comparator<Laptop> lap2 = new Comparator<Laptop>() {
+
+        @Override
+        public int compare(Laptop e1, Laptop e2) {
+            return (int) (e1.ram - e2.ram;
+        }
+    };
+    
+    Comparator<Laptop> lap3 = new Comparator<Laptop>() {
+
+        @Override
+        public int compare(Laptop e1, Laptop e2) {
+            return (int) (e1.abc - e2.abc;
+        }
+    };
+    
+    
+    Arrays.sort(arr, lap2);
+  }
+}
