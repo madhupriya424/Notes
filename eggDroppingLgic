@@ -1,0 +1,87 @@
+n floors and k eggs
+https://www.geeksforgeeks.org/dynamic-programming-set-11-egg-dropping-puzzle/
+n = 8 , k = 2;
+
+
+  7 always break
+  6 always break
+  5 always break
+  4 Start breaking -------------
+  3 not break
+  2 not break
+  1 not break
+
+					  Total Floors(Min)
+  Eggs   0  1  2  3  4  5  6  7  8        
+         1  1  2  3  4  5  6  7  8
+         2  1  2
+ 
+First select floor ----> either it will break or not              
+              
+              
+  			options
+        
+start at  1 :
+							ans = 1 + max(0, matrix[2][2])				rem egg = 2  & rem floor = 1
+             			= 1 + 2 = 3
+
+start at 2 :    
+             ans = 1 + max(matrix[1][1], matrix[2][1])				
+                 = 1 + 1 = 2 1 + 1 = 2
+
+
+start at 3 : 
+						ans = 1 + max(matrix[1][2], 0)
+                = 1 + 2 = 3
+              
+              
+              
+              
+              
+ // Rain water harvestio
+              
+                          |
+                |         |
+            |   |   |     |
+            |   |   |     |
+            | | |   | |   |
+            | | | | | | | |
+|           4 2 5 1 4 2 3 9  
+    water   0 2 0          
+                               
+						public static int rainWater(int height[]){
+              int finalArea = 0;
+              for(int i=1;i<height.length-1;i++)
+              {
+                // Left highest
+                  int leftH = height[0];
+                  for(int j=1;j<=i-1;j++)
+                  {
+                     if(leftH<height[j])
+                       leftH = height[j];
+                  }
+                  
+                // Right highest
+                  int rightH = height[i+1];
+                  for(int j=i+1;j<height.length;j++)
+                  {
+                     if(rightH<height[j])
+                       rightH = height[j];
+                  }
+                // min(left, right)
+                  int level = leftH > rightH ? rightH : leftH;   
+                 
+                 int area = level - height[i];
+                 if(area > 0)
+                 		finalArea += area;
+              }
+              return finalArea;
+            }      
+
+              
+              
+              
+              
+              
+              
+              
