@@ -1,0 +1,18 @@
+# Notes
+#System.out.println()---Implementation.
+class PrintStream{
+ 	void static println(){
+    
+  } 
+}
+
+class System{
+  static PrintStream out;
+  
+}
+
+class C{
+  public static void main(String[] args){
+    System.out.println();
+  }
+}
