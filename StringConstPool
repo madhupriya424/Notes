@@ -1,0 +1,53 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+	    
+	    //case 1:
+	    String name1 = "Madhu";  
+	    String name2 = "Madhu";
+	    System.out.println("name1.equals(name2): "+ (name1.equals(name2))); //true
+	    System.out.println("name1 == name2: " + (name1 == name2));          //true
+	   
+	    //case 2:
+        String name1 = "Madh";  
+	    String name2 = "Madhu";
+	    System.out.println("name1.equals(name2): "+ (name1.equals(name2))); //false
+	    System.out.println("name1 == name2: " + (name1 == name2));          //false
+	   
+	    //case 3:
+	    String name1 = "null";  
+	    String name2 = "null";
+	    System.out.println("name1.equals(name2): "+ (name1.equals(name2))); //true
+	    System.out.println("name1 == name2: " + (name1 == name2));          //true
+        
+        //case 4:    
+	    String name1 = new String("Madhu");
+	    String name2 = new String("Madhu");
+		System.out.println("name1.equals(name2): "+ (name1.equals(name2))); //true
+		System.out.println("name1 == name2: " + (name1 == name2));         //false
+		
+	    //case 5:
+	    String name1 = new String("Madh");
+	    String name2 = new String("Madhu");
+	    System.out.println("name1.equals(name2): "+ (name1.equals(name2))); //false
+	    System.out.println("name1 == name2: " + (name1 == name2));          //false
+	   
+	    //case 6:
+	    String name1 = new String("null");
+ 	    String name2 = new String("null");
+ 	    System.out.println("name1.equals(name2): "+ (name1.equals(name2))); //true
+ 	    System.out.println("name1 == name2: " + (name1 == name2));          //false
+      
+      //case 7:
+ 	    String name1 = "Madhu";
+ 	    String name2 = new String("Priya");
+ 	    System.out.println("name1.equals(name2): "+ (name1.equals(name2))); //false
+ 	    System.out.println("name1 == name2: " + (name1 == name2));          //false
+	}
+}
+
+/* Note: "equals()" -- Always check the String value in both the cases(literal, new String())
+          but "==" -- Always check the object reference return true if both have same object     */
