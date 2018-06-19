@@ -1,5 +1,7 @@
 
-
+https://www.tutorialspoint.com/design_pattern/factory_pattern.htm
+https://dzone.com/articles/singleton-design-pattern-%E2%80%93
+https://sourcemaking.com/design_patterns
 
 class A{
     
@@ -32,17 +34,16 @@ class B{
 }
 
 ===============================================================================================================================
-public class SingletonExample { 
-
-private static final SingletonExample singletonInstance = new SingletonExample; 
-// SingletonExample prevents any other class from instantiating private SingletonExample() { }
-// Providing Global point of access 
-public static SingletonExample getSingletonInstance() 
-  {
-    return singletonInstance; 
-  } 
-public void printSingleton()
-  { 
-    System.out.println("Inside print Singleton"); 
-  } 
+public class SingletonExample {
+    private static final SingletonExample singletonInstance = new SingletonExample;
+    // SingletonExample prevents any other class from instantiating
+    private SingletonExample() {
+    }
+    // Providing Global point of access
+    public static SingletonExample getSingletonInstance() {
+        return singletonInstance;
+    }
+    public void printSingleton(){
+        System.out.println("Inside print Singleton");
+    }
 }
