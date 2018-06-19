@@ -1,0 +1,45 @@
+
+interface Shape {
+    public void draw();
+}
+
+class Circle implements Shape{
+    public void draw(){
+        System.out.println("Circle drawn");
+    }
+}
+
+class Rectange implements Shape{
+    public void draw(){
+        System.out.println("Rectange drawn");
+    }
+}
+
+class Triangle implements Shape{
+    public void draw(){
+        System.out.println("Triangle drawn");
+    }
+}
+
+class ShapeFactory{
+    public static Shape getFactory(String s){
+        if(s.equals("Circle")){
+            return new Circle();
+        }
+        else if(s.equals("Rectangle"){
+            return new Rectangle();
+        }
+    }
+}
+
+
+class Client {
+    public static void main(String[] args){
+    
+        Shape s1 = ShapeFactory.getFactory("Circle");
+        s1.draw();
+        
+        Shape s2 = ShapeFactory.getFactory("Rectangle");
+        s2.draw();
+    }
+}
