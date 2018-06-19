@@ -1,3 +1,4 @@
+https://www.tutorialspoint.com/design_pattern/factory_pattern.htm
 
 interface Shape {
     public void draw();
