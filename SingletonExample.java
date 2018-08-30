@@ -2,6 +2,8 @@
 https://www.tutorialspoint.com/design_pattern/factory_pattern.htm
 https://dzone.com/articles/singleton-design-pattern-%E2%80%93
 https://sourcemaking.com/design_patterns
+https://dzone.com/articles/singleton-design-pattern-%E2%80%93
+https://www.geeksforgeeks.org/singleton-design-pattern/
 
 class A{
     
