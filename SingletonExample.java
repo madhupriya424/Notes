@@ -49,3 +49,37 @@ public class SingletonExample {
         System.out.println("Inside print Singleton");
     }
 }
+----------------------------------------------------------------------------------------------------------------------------------
+    
+    
+ /*package whatever //do not write package name here */
+
+import java.io.*;
+
+//singleton class
+class Student{
+    private static Student obj=null;
+    
+    public void showMessage(){
+	 System.out.print("Hello world!");
+	}
+	
+    public static Student getInstance(){
+        if(obj==null){
+           obj = new Student();
+        }
+    return obj;
+    }
+}
+
+
+class Employee {
+
+	public static void main (String[] args) {
+	    Student s = Student.getInstance();
+		s.showMessage();
+	}
+}
+
+Output:
+Hello World!
