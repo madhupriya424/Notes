@@ -1,0 +1,24 @@
+for each doesn't work on index basis but normal for loop does work with index basis.
+
+// To print the adj[] of ArrayList type:
+for(int i=0;i<adj.length;i++)
+  			System.out.println(i+" "+adj[i]);
+
+//
+for(inti=0;i<adj.length;i++)
+{
+  for(intj=0;j<adj[i].size();j++)
+  {
+    System.out.print(adj[i].get(j)); //checking by index and will return the first index value of that list.
+  }
+  System.out.println();
+}
+
+//
+ for(int i=0;i<adj[source].size();i++)
+			{
+  		if(!visited[adj[source].get(i)])
+    		dfs(adj[source].get(i), visited);
+			}  
+  
+  
