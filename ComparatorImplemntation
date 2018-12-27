@@ -1,0 +1,68 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+
+ class Student {
+    
+    String name;
+    int age;
+    
+    Student(String n, int a){
+        name = n;
+        age = a;
+    }
+    
+    public String toString(){
+        return this.name+" "+this.age+" ";
+    }
+    
+    public static <T> void sort(T[] arr, Comparator<? super T> cmp) {
+    for(int i=0;i<arr.length;i++)
+	    {
+	        boolean swap = false;
+	        for(int j=0;j<arr.length-i-1;j++)
+	        {
+	              // Swapping based on compare function value
+	              // if value  > 0  then swap
+	              if(cmp.compare(arr[j], arr[j+1]) > 0)
+	              {
+	                  T temp = arr[j];
+	                  arr[j] = arr[j+1];
+	                  arr[j+1] = temp;
+	                  swap=true;
+	              }
+	        }
+	        if(!swap)
+	           break;
+	    }
+    }
+    
+   
+    
+	public static void main (String[] args) {
+	    
+	    Student st[] = new Student[5];
+	    st[0] = new Student("Gaur", 22);
+	    st[1] = new Student("Praz", 25);
+	    st[2] = new Student("Bri", 26);
+	    st[3] = new Student("Arp", 28);
+	    st[4] = new Student("Shub", 21);
+	    
+	    sort(st, new Comparator<Student>(){
+	        
+	        public int compare(Student s1, Student s2){
+	         if(s1.age>s2.age)
+	            return 1;
+	        else if(s1.age==s2.age)
+	            return 0;
+	        else
+	            return -1;
+	        }
+	    });
+	    
+	    for(Student s: st){
+	        System.out.print(s+" ");
+	    }
+		
+	}
+}
