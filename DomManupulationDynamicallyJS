@@ -1,0 +1,39 @@
+document.body.append("Hello hi")         //To display the value on screen
+>> undefined
+let obj = document.createElement("h1")   // Issue using let here
+>> undefined
+obj = document.createElement("h1")      //Add the html tag <h1></h1>
+>> <h1>​</h1>​
+b = document.createTextNode("Hello")
+>> "Hello"
+obj.appendChild(b)
+>> "Hello"
+document.body.append(obj)
+undefined                               // Display Hello on screen
+document.getElementById("h1").innerHTML = "Hello Molu";
+>> VM845:1 Uncaught TypeError: Cannot set property 'innerHTML' of null
+    at <anonymous>:1:41
+(anonymous) @ VM845:1                   // Error because we haven't set the Id still
+obj = document.createElement("h1")
+>> <h1>​</h1>​
+obj.setAttribute("id", "Madhu")
+>> undefined
+obj.append("Hell")
+>> undefined
+document.body.append(obj)
+>> undefined                          //Display Hell on screen
+document.getElementById("Madhu").innerHTML = "Hello Molu";
+"Hello Molu"                         // Change Hell to Hello Molu
+document.getElementById("Madhu").innerHTML = "Hello Mo";
+>> "Hello Mo"                       // Change "Hello Molu" to "Hello Mo"          
+arr = ["Gaur", "Madhu" , "Priya", "Raj"];
+>> (4) ["Gaur", "Madhu", "Priya", "Raj"]
+let ul = document.createElement("ul")
+>> undefined
+for(let i=0;i<arr.length;i++){
+	let element = document.createElement("li")
+     element.append(arr[i]);
+     ul.appendChild(element)
+}
+document.body.append(ul)
+>> undefined                     // Gaur Madhu Priya Raj
