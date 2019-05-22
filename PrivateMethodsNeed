@@ -1,0 +1,35 @@
+NEED OF PRIVATE METHOD:
+
+import java.io.*;
+import java.util.*;
+class Election {
+    private int totalVote;
+    
+    Election() {
+        this.totalVote = 0;
+    }
+    
+    public void addVote() {
+        this.totalVote++;
+    } 
+    
+    public int getTotalVote() {
+        return totalVote;
+    }
+    
+    public setVote(int userName, int passworde, int votes) {
+        //verify username and passwords
+        this.totalVote = totalVote;
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+        Election e = new Election();
+        
+        e.addVote();
+        e.addVote();
+        e.totalVote = 0;
+        System.out.println(e.getTotalVote());
+    }
+}
